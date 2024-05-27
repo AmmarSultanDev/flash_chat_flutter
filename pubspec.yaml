@@ -9,6 +9,24 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  #A flutter package which contains a collection of some cool and awesome text animations.
+  #Recommended package for text animations in Codemagic's Ebook, "Flutter libraries we love".
+  animated_text_kit: ^4.0.0
+  #A Flutter plugin to use the Firebase Core API, which enables connecting to multiple Firebase apps.
+  #To learn more about Firebase, please visit the Firebase website
+  firebase_core: ^2.25.4
+  #A Flutter plugin to use the Firebase Authentication API.
+  #To learn more about Firebase Auth, please visit the Firebase website
+  firebase_auth: ^4.17.4
+  #A Flutter plugin to use the Cloud Firestore API.
+  #To learn more about Firebase Cloud Firestore, please visit the Firebase website
+  cloud_firestore: ^4.15.5
+  #A simple widget wrapper to enable modal progress HUD (a modal progress indicator, HUD = Heads Up Display)
+  #A fork of the original modal_progress_hud by mmcc007 with Null Safety and additional features.
+  modal_progress_hud_nsn: ^0.5.1
 
 dev_dependencies:
   flutter_test:
