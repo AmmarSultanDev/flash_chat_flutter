@@ -1,20 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flash_chat_flutter/screens/welcome_screen.dart';
+import 'package:flash_chat_flutter/screens/login_screen.dart';
+import 'package:flash_chat_flutter/screens/registration_screen.dart';
+import 'package:flash_chat_flutter/screens/chat_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
-  runApp(const MainApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(FlashChat());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
+class FlashChat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      initialRoute: WelcomeScreen.id,
+      routes: {
+        WelcomeScreen.id: (context) => WelcomeScreen(),
+        ChatScreen.id: (context) => ChatScreen(),
+        LoginScreen.id: (context) => LoginScreen(),
+        RegistrationScreen.id: (context) => RegistrationScreen()
+      },
     );
   }
 }

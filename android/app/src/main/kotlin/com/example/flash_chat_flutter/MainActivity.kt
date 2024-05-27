@@ -1,5 +1,4 @@
-package com.example.flash_chat_flutter
-
+package com.sultanammar.flashchatflutter
 import io.flutter.embedding.android.FlutterActivity
 
 class MainActivity: FlutterActivity()
